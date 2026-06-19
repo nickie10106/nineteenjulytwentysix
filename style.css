@@ -1,0 +1,371 @@
+/* Base iPhone Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Cherry Bomb One", system-ui;
+    background-color: #FEE9E4; /* Cute pastel pink background */
+    color: #614E54;
+    text-align: center;
+    overflow: hidden; /* Prevents accidental scrolling */
+    touch-action: manipulation; /* Makes tapping feel instantly responsive */
+}
+
+
+/*font family*/
+.cherry-bomb-one-regular {
+  font-family: "Cherry Bomb One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Gateway Image Styling */
+#gateway-image {
+    max-width: 80%;       /* Keeps the image from touching the edges of the phone */
+    max-height: 295px;    /* Prevents it from getting too tall */
+    border-radius: 15px;  /* Gives the image smooth, rounded corners */
+    margin-bottom: 25px;  /* Creates a nice gap between the image and the Yes/No buttons */
+    object-fit: cover;    /* Ensures the image doesn't look stretched or squished */
+}
+
+/* Screen Controller */
+.screen {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.screen.active {
+    display: flex;
+}
+
+/* Buttons & Text */
+h1 { font-size: 40px; margin-bottom: 20px; color: #F7585E;}
+h2 {font-size: 30px; margin-bottom: 20px; color: #614E54;}
+p { font-size: 18px; line-height: 1.5; margin-bottom: 30px; }
+/* Gateway Special Text */
+#jp {
+    color: #F7585E;       /* Your exact custom hex color! */
+    font-size: 40px;      /* Makes it slightly smaller than the h1 */
+    font-weight: bold;    /* Optional: Makes the text a bit thicker */
+    margin-bottom: 5px;   /* Keeps it tucked nicely above the h1 */
+    margin-top: 0;        /* Removes any weird extra space above it */
+}
+
+button {
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s; /* Smooth growing effect */
+}
+
+.button-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-btn { width: 80%; background-color: #ff8080; }
+.back-btn { background-color: #ccc; margin-top: 40px; }
+
+/* Gateway Specifics */
+#yes-btn { transition: transform 0.3s ease; }
+
+/* Countdown Image Styling */
+#countdown-image {
+    max-width: 80%;       
+    max-height: 300px;    
+    border-radius: 15px;  
+    margin-bottom: 30px;  /* Space between the picture and the "Not yet!" text */
+    object-fit: cover;    
+}
+
+/* Countdown Specifics */
+#timer {
+    font-family: "Electrolize", sans-serif;;
+    font-size: 32px;
+    background: white;
+    padding: 20px;
+    border-radius: 50px;
+    border-width: 30px;
+    border: #CFB5D0;
+    color: #CFB5D0;
+}
+
+/* --- Menu Window Frame Styling --- */
+.window-frame {
+    background-color: white;
+    border: 3px solid #A65D67; /* The dark pinkish border */
+    width: 90vw;               /* Leaves some pink background on the sides */
+    height: 85vh;              /* Leaves some pink background on top and bottom */
+    position: relative;        /* Crucial: Allows us to place the dots perfectly */
+    
+    /* Centers everything inside the white box */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+/* The container for the 3 dots */
+.window-dots {
+    position: absolute;
+    top: -24px;          /* Pulls the dots up so they sit exactly on the line */
+    right: 15px;         /* Pushes them to the top right corner */
+    display: flex;
+    gap: 8px;            /* Space between each dot */
+}
+
+/* Base style for all dots */
+.dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid #A65D67; /* Matches the main window border */
+}
+
+/* Individual dot colors */
+.dot.yellow { background-color: #FFEA96; }
+.dot.green { background-color: #BCE49C; }
+.dot.pink { background-color: #F4A4BA; }
+
+/* Download Link disguised as button */
+.download-btn {
+    display: inline-block;
+    background-color: #ff6666;
+    color: white;
+    border-radius: 25px;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px;
+    width: calc(80% - 60px);
+}
+
+/* --- Menu Rows Layout --- */
+.menu-row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px; /* Spacing between rows */
+    gap: 10px;           /* Spacing between items in the same row */
+}
+
+/* --- Row 1: The Green Counter Widget --- */
+.row-1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* The outer light green box */
+.counter-widget {
+    background-color: #def0c4; /* The light green from your image */
+    border: 3px solid #A65D67; /* The dark pink border */
+    border-radius: 15px;       /* Smooth rounded outer corners */
+    padding: 10px 15px 15px 15px; 
+    width: 95%;                /* Takes up most of the row width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;   /* Aligns the text to the left */
+}
+
+/* The text above the white box */
+.counter-title {
+    font-size: 15px;
+    color: #000;
+    margin: 0 0 5px 5px;
+    text-align: left;
+}
+
+/* The inner white rectangle holding the numbers */
+.counter-inner-box {
+    background-color: white;
+    border: 3px solid #A65D67; 
+    width: 100%;
+    padding: 20px 10px;        /* Gives the numbers nice breathing room */
+    box-sizing: border-box;
+    text-align: center;        /* Centers the live numbers */
+    font-size: 22px;
+    font-weight: bold;
+    color: #A65D67;            
+}
+
+/* Row 2: Message card icon and your static photo */
+.icon-btn {
+    width: 35%;          /* Reduced from 45% */
+    max-width: 85px;     /* Reduced from 120px */
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.static-img {
+    width: 35%;          /* Reduced from 45% */
+    max-width: 85px;     /* Reduced from 120px */
+    aspect-ratio: 1/1; 
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2.5px solid #A65D67;
+}
+
+/* Rows 3 & 4: The 6 Quiz App items */
+.quiz-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    width: 25%;            /* Gives them slightly more breathing room on the sides */
+    cursor: pointer;
+    transition: transform 0.15s ease;
+}
+
+.quiz-icon {
+    width: 100%;
+    max-width: 48px;       /* Shrunk down from 65px so they look like elegant mini-apps */
+    aspect-ratio: 1 / 1;    
+    object-fit: contain;   
+    margin-bottom: 4px;     
+}
+
+.quiz-label {
+    font-size: 10px;       /* Slightly smaller text to balance the smaller icon */
+    font-weight: bold;
+    color: #444;
+    text-align: center;
+    line-height: 1.1;
+}
+
+/* Row 5: The Download Banner Button at the very bottom */
+.banner-btn {
+    width: 80%;
+    max-width: 300px;      /* Shrunk down from 250px so it doesn't crowd the screen */
+    object-fit: contain;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+.banner-btn:active {
+    transform: scale(0.95);
+}
+
+/* ==========================================
+   QUIZ STYLING
+========================================== */
+
+/* Universal Quiz Headers */
+.quiz-header-icon { width: 80px; margin-bottom: 5px; }
+.quiz-header-title { font-size: 22px; color: #ff6666; margin: 0; line-height: 1; text-align: center; }
+.quiz-header-subtitle { font-size: 14px; color: #7a5c5c; margin: 5px 0 20px 0; font-weight: bold; text-align: center; }
+
+/* The Pill Buttons (Used for YES/NO and Answers) */
+.pill-btn {
+    width: 80%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 25px;
+    border: 3px solid #A65D67;
+    background-color: #FAEDED; /* Pale pink */
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.pill-btn:active { transform: scale(0.95); }
+#quiz-no-btn { transition: transform 0.2s ease-out; transform-origin: center; }
+
+/* Progress Bar */
+.progress-bar-container {
+    width: 90%;
+    height: 15px;
+    border: 2px solid #555;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 15px;
+    background: white;
+}
+.progress-fill {
+    height: 100%;
+    width: 0%; /* JS changes this */
+    background-color: #cbb4e3; /* Light purple */
+    border-radius: 8px;
+    transition: width 0.3s ease;
+}
+.progress-star {
+    position: absolute;
+    top: -10px;
+    width: 35px;
+    transition: left 0.3s ease;
+    transform: translateX(-50%); /* Centers the star on the edge of the fill */
+}
+
+/* Question Header Row */
+.quiz-header-small { display: flex; justify-content: space-between; align-items: center; width: 100%; margin-bottom: 15px; }
+.mini-icon { width: 40px; }
+.header-text-center { flex-grow: 1; text-align: center; }
+
+/* The Teal Question Widget */
+.question-widget {
+    background-color: #B2E2D8; /* Teal */
+    border: 3px solid #A65D67;
+    border-radius: 15px;
+    padding: 10px 15px 15px 15px;
+    width: 90%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+.question-widget h3 { margin: 0 0 5px 0; font-size: 14px; }
+.question-inner-box {
+    background-color: white;
+    border: 3px solid #A65D67;
+    padding: 20px 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #000;
+}
+
+/* Answers Container */
+.answers-container { width: 100%; display: flex; flex-direction: column; align-items: center; }
+
+/* Results Widget */
+.result-widget {
+    background-color: #FAEDED;
+    border-radius: 15px;
+    padding: 15px;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.result-widget img { width: 40%; max-width: 100px; margin-right: 15px; }
+.result-text-area h1 { font-size: 35px; color: #A65D67; margin: 0; }
+.result-text-area p { font-size: 14px; font-weight: bold; margin: 0; color: #555; }
+
+/* Bottom Nav (Stars and Back to Menu) */
+.bottom-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    position: absolute;
+    bottom: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #A65D67;
+}
+.nav-star { width: 30px; }

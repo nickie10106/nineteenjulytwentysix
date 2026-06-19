@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="app-icon.png"> <title>For You</title>
+
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Electrolize&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div id="gateway-screen" class="screen active">
+        <img src="img/1.png" alt="Present" id="gateway-image">
+        <h1 id="jp">プレゼント</h1>
+        <h2>do you want it?</h2>
+        <div class="button-group">
+            <button id="yes-btn">Yes</button>
+            <button id="no-btn">No</button>
+        </div>
+    </div>
+
+    <div id="countdown-screen" class="screen">
+        <img src="img/2.png" alt="Countdown Picture" id="countdown-image">
+        <h1>まだまだ ~</h1>
+        <p>Stop being hasty and learn some patience, idiot.</p>
+        <div id="timer">Loading...</div>
+    </div>
+
+    <div id="menu-screen" class="screen">
+        <div class="window-frame">
+            
+            <div class="window-dots">
+                <div class="dot yellow"></div>
+                <div class="dot green"></div>
+                <div class="dot pink"></div>
+            </div>
+
+            <div class="menu-row row-1">
+                <div class="counter-widget">
+                    <h2 class="counter-title">Days since we've been together</h2>
+                    <div id="hours-counter" class="counter-inner-box">Loading...</div>
+                </div>
+            </div>
+
+            <div class="menu-row row-2">
+                <img src="img/3.png" alt="Read Card" class="icon-btn" onclick="showScreen('message-screen')">
+                <img src="img/us-static.JPG" alt="Us" class="static-img"> 
+            </div>
+
+            <div class="menu-row row-3">
+                <div class="quiz-item" onclick="openQuizStart('quiz-1')">
+                    <img src="img/4.png" alt="Quiz 1" class="quiz-icon">
+                    <span class="quiz-label">know me</span>
+                </div>
+                <div class="quiz-item" onclick="openQuizStart('quiz-2')">
+                    <img src="img/5.png" alt="Quiz 2" class="quiz-icon">
+                    <span class="quiz-label">my favs</span>
+                </div>
+                <div class="quiz-item" onclick="openQuizStart('quiz-3')">
+                    <img src="img/6.png" alt="Quiz 3" class="quiz-icon">
+                    <span class="quiz-label">アニメ></span>
+                </div>
+            </div>
+
+            <div class="menu-row row-4">
+                <div class="quiz-item" onclick="openQuizStart('quiz-4')">
+                    <img src="img/8.png" alt="Quiz 4" class="quiz-icon">
+                    <span class="quiz-label">star signs</span>
+                </div>
+                <div class="quiz-item" onclick="openQuizStart('quiz-5')">
+                    <img src="img/9.png" alt="Quiz 5" class="quiz-icon">
+                    <span class="quiz-label">side quests</span>
+                </div>
+                <div class="quiz-item" onclick="openQuizStart('quiz-6')"> <img src="img/10.png" alt="Quiz 6" class="quiz-icon">
+                    <span class="quiz-label">2 truths, 1 lie</span>
+                </div>
+            </div>
+
+            <div class="menu-row row-5">
+                <a href="img/us-download.jpg" download="Our_Picture.jpg">
+                    <img src="img/7.png" alt="Download Pic" class="banner-btn">
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="quiz-start-screen" class="screen">
+        <div class="window-frame">
+            <div class="window-dots">
+                <div class="dot yellow"></div><div class="dot green"></div><div class="dot pink"></div>
+            </div>
+
+            <img id="start-icon" src="img/4.png" alt="Quiz Icon" class="quiz-header-icon">
+            <h1 id="start-title" class="quiz-header-title">Quiz Title</h1>
+            <p id="start-subtitle" class="quiz-header-subtitle">subtitle goes here</p>
+
+            <h2 class="start-prompt">Start?</h2>
+            
+            <button class="pill-btn yes-btn" onclick="startQuizQuestions()">YES</button>
+            <button id="quiz-no-btn" class="pill-btn no-btn" onclick="shrinkNoButton()">NO</button>
+
+            <div class="bottom-nav" onclick="showScreen('menu-screen')">
+                <img src="img/star.png" class="nav-star" alt="star">
+                <span>back to menu</span>
+                <img src="img/star.png" class="nav-star" alt="star">
+            </div>
+        </div>
+    </div>
+
+    <div id="quiz-question-screen" class="screen">
+        <div class="window-frame">
+            <div class="window-dots">
+                <div class="dot yellow"></div><div class="dot green"></div><div class="dot pink"></div>
+            </div>
+
+            <div class="progress-bar-container">
+                <div id="progress-fill" class="progress-fill"></div>
+                <img src="img/star.png" id="progress-star" class="progress-star" alt="star">
+            </div>
+
+            <div class="quiz-header-small">
+                <img id="q-icon-left" src="img/4.png" class="mini-icon">
+                <div class="header-text-center">
+                    <h1 id="q-title" class="quiz-header-title">Title</h1>
+                    <p id="q-subtitle" class="quiz-header-subtitle">subtitle</p>
+                </div>
+                <img id="q-icon-right" src="img/4.png" class="mini-icon">
+            </div>
+
+            <div class="question-widget">
+                <h3 id="q-number">Q1</h3>
+                <div class="question-inner-box">
+                    <p id="q-text">This is where the question is placed</p>
+                </div>
+            </div>
+
+            <div id="answers-container" class="answers-container">
+                </div>
+
+            <div class="bottom-nav" onclick="showScreen('menu-screen')">
+                <img src="img/star.png" class="nav-star" alt="star">
+                <span>back to menu</span>
+                <img src="img/star.png" class="nav-star" alt="star">
+            </div>
+        </div>
+    </div>
+
+    <div id="quiz-result-screen" class="screen">
+        <div class="window-frame">
+            <div class="window-dots">
+                <div class="dot yellow"></div><div class="dot green"></div><div class="dot pink"></div>
+            </div>
+
+            <img id="result-icon" src="img/4.png" class="quiz-header-icon">
+            <h1 id="result-title" class="quiz-header-title">Title</h1>
+            <p id="result-subtitle" class="quiz-header-subtitle">subtitle</p>
+
+            <div class="result-widget">
+                <img id="result-image" src="img/result-good.png" alt="Reaction">
+                <div class="result-text-area">
+                    <h1 id="result-score">60%</h1>
+                    <p id="result-message">well, thats a merit... i guess...</p>
+                </div>
+            </div>
+
+            <div class="bottom-nav" onclick="showScreen('menu-screen')">
+                <img src="img/star.png" class="nav-star" alt="star">
+                <span>back to menu</span>
+                <img src="img/star.png" class="nav-star" alt="star">
+            </div>
+        </div>
+    </div>
+
+    <div id="message-screen" class="screen">
+        <h1>To my amazing boyfriend,</h1>
+        <p>Write your lovely, heartfelt birthday message right here! You can add paragraphs, emojis, or anything you like.</p>
+        <p>Love, Me </p>
+        <button class="back-btn" onclick="showScreen('menu-screen')">Back to Menu</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
