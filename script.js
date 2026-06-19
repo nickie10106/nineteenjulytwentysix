@@ -16,6 +16,7 @@ const quizzes = {
             { q: "Which part of Singapore do I live in?", options: ["Sengkang", "Botanic Gardens", "Punggol", "Yio Chu Kang"], correct: 2 },
             { q: "What was my original hair colour?", options: ["Chocolate brown", "Pitch black", "Tan brown", "Raven"], correct: 0 },
             { q: "What did I study before Psychology?", options: ["Journalism", "Creative Writing", "Mass Communications", "Graphic Design"], correct: 2 },
+            { q: "My chinese name is 黄智敏 (Huang Zhi Min). What does it mean?", options: ["Precious Person", "Agile Mind", "Gods Gift" ,"Excllent Fortune"], correct: 1 },
             { q: "What would 100% motivate me while Im in worm mode?", options: ["Death", "Deadlines", "Nothing can motivate me", "Boredom"], correct: 3 },
             { q: "When I imagine myself, what hair colour do I imagine myself in?", options: ["Plum", "Pink", "Blonde", "Whatever I have on"], correct: 2 },
             { q: "Which phobia do I NOT have?", options: ["Cacophobia", "Molluscophobia", "Thalassophobia", "Trypophobia"], correct: 2 }
