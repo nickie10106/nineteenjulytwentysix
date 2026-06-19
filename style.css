@@ -319,28 +319,61 @@ button {
 .mini-icon { width: 40px; }
 .header-text-center { flex-grow: 1; text-align: center; }
 
-/* The Teal Question Widget */
+/* The Teal Question Widget Container */
 .question-widget {
-    background-color: #B2E2D8; /* Teal */
+    background-color: #B2E2D8; 
     border: 3px solid #A65D67;
     border-radius: 15px;
-    padding: 10px 15px 15px 15px;
+    padding: 8px 12px 12px 12px; /* Reduced padding around the edges */
     width: 90%;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin-bottom: 12px;         /* Shrunk from 20px to pull the buttons up closer */
 }
-.question-widget h3 { margin: 0 0 5px 0; font-size: 14px; }
+
+.question-widget h3 { 
+    margin: 0 0 4px 0; 
+    font-size: 13px; 
+}
+
+/* The White Rectangle inside the Teal Widget */
 .question-inner-box {
     background-color: white;
     border: 3px solid #A65D67;
-    padding: 20px 10px;
+    padding: 12px 10px;          /* Cut vertical padding down from 20px to 12px to make it less tall */
     text-align: center;
     font-weight: bold;
     color: #000;
+    font-size: 13px;             /* Slightly crisper text size for tight fitting */
 }
 
 /* Answers Container */
 .answers-container { width: 100%; display: flex; flex-direction: column; align-items: center; }
+
+/* ==========================================
+   SCOPED COMPACT QUIZ BUTTONS
+   (This leaves the gateway screen completely untouched!)
+   ========================================== */
+
+#quiz-start-screen .pill-btn,
+#quiz-question-screen .pill-btn {
+    width: 80%;
+    padding: 8px 12px;           /* Slimmer button thickness */
+    margin-bottom: 6px;          /* Tight space between choices */
+    border-radius: 25px;
+    border: 3px solid #A65D67;
+    background-color: #FAEDED;
+    color: #000;
+    font-weight: bold;
+    font-size: 13px;             
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+/* Keep the active shrink effect scoped too */
+#quiz-start-screen .pill-btn:active,
+#quiz-question-screen .pill-btn:active { 
+    transform: scale(0.95); 
+}
 
 /* Results Widget */
 .result-widget {
