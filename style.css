@@ -375,6 +375,26 @@ button {
     transform: scale(0.95); 
 }
 
+/* --- Quiz Answer Feedback Colors --- */
+
+/* If the selected answer is correct */
+#quiz-question-screen .pill-btn.correct-choice {
+    background-color: #C5E891 !important;
+    border-color: #C5E891 !important;
+}
+
+/* If the selected answer is incorrect */
+#quiz-question-screen .pill-btn.wrong-choice {
+    background-color: #F7585E !important;
+    border-color: #F7585E !important;
+    color: #FFFFFF !important;
+}
+
+/* Temporarily disables tapping anything else during the 1.2s pause */
+.answers-container.disabled {
+    pointer-events: none;
+}
+
 /* Results Widget */
 .result-widget {
     background-color: #FAEDED;

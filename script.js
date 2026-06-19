@@ -146,26 +146,62 @@ function loadQuestion() {
     const answersContainer = document.getElementById('answers-container');
     answersContainer.innerHTML = ''; // Clear old buttons
     
+    // Ensure container is clickable again for the new question
+    answersContainer.classList.remove('disabled');
+    
     qData.options.forEach((option, index) => {
         const btn = document.createElement('button');
         btn.className = 'pill-btn';
         btn.innerText = option;
-        btn.onclick = () => handleAnswer(index, qData.correct);
+        
+        // NOTICE: We are now passing 'btn' itself as a third setting!
+        btn.onclick = () => handleAnswer(index, qData.correct, btn);
         answersContainer.appendChild(btn);
     });
 }
 
-// 5. Check Answer and Move to Next
-function handleAnswer(selectedIndex, correctIndex) {
-    if (selectedIndex === correctIndex) { score++; }
-    
-    currentQuestionIndex++;
-    
-    if (currentQuestionIndex < quizzes[currentQuizId].questions.length) {
-        loadQuestion();
+// 5. Check Answer with Color Feedback & Delay
+function handleAnswer(selectedIndex, correctAnswers, clickedBtn) {
+    // 1. Instantly lock inputs so they can't double-click or pick another option
+    const container = document.getElementById('answers-container');
+    container.classList.add('disabled');
+
+    // 2. Verify if choice is correct (handles single number or array)
+    let isCorrect = false;
+    if (Array.isArray(correctAnswers)) {
+        isCorrect = correctAnswers.includes(selectedIndex);
     } else {
-        showResults();
+        isCorrect = (selectedIndex === correctAnswers);
     }
+
+    // 3. Paint the button based on correctness
+    if (isCorrect) {
+        score++;
+        clickedBtn.classList.add('correct-choice');
+    } else {
+        clickedBtn.classList.add('wrong-choice');
+        
+        // Optional: If you want to also highlight the right answer so he learns,
+        // you could uncomment the lines below!
+        /*
+        Array.from(container.children).forEach((btn, idx) => {
+            if (Array.isArray(correctAnswers) ? correctAnswers.includes(idx) : idx === correctAnswers) {
+                btn.classList.add('correct-choice');
+            }
+        });
+        */
+    }
+
+    // 4. Wait exactly 1.2 seconds before transitioning to give him time to look
+    setTimeout(() => {
+        currentQuestionIndex++;
+        
+        if (currentQuestionIndex < quizzes[currentQuizId].questions.length) {
+            loadQuestion();
+        } else {
+            showResults();
+        }
+    }, 1200); 
 }
 
 // 6. Show the Final Score & Dynamic Image
