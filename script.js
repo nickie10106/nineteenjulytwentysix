@@ -61,7 +61,12 @@ const quizzes = {
         title: 'star signs',
         subtitle: 'We can\'t be soulmates if you don\'t know about our star charts.',
         questions: [
-            { q: "Where was our first date?", options: ["Cinema", "Coffee Shop", "Park", "Restaurant"], correct: 1 }
+            { q: "Venus rules over romance. What is my venus sign?", options: ["Cancer", "Leo", "Pisces", "Aries"], correct: 1 },
+            { q: "We have the same sun sign. What is our sun sign?", options: ["Aries", "Capricorn", "Cancer", "Virgo"], correct: 2 },
+            { q: "I am a venus in Leo which means that when it comes to romance, I like to be treated like a ________________.", options: ["Garlic", "Princess", "Romance Lead", "Fragile Object"], correct: 1 },
+            { q: "My rising sign is Pisces. Rising signs dictate our ______.", options: ["inner self", "perception", "intellect", "presentation to others"], correct: 3 },
+            { q: "Which element does my star chart align with most?", options: ["Water", "Fire", "Air", "Earth"], correct: 0 },
+            { q: "What is my big three (Sun, Moon, Rising) signs?", options: ["Cancer, Pisces, Virgo", "Cancer, Aries, Aquarius", "Cancer, Saggitarius, Pisces", "Cancer, Leo, Virgo"], correct: 2 }
         ]
     },
     'quiz-5': {
