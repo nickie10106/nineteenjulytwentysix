@@ -74,12 +74,20 @@ const quizzes = {
         title: 'side quests',
         subtitle: 'I procrastinate by doing random side quests and coming back with 100 balls of yarn. How many of my hobbies do you know about?',
         questions: [
-            { q: "Where was our first date?", options: ["Cinema", "Coffee Shop", "Park", "Restaurant"], correct: 1 }
+            { q: "What is a craft that I have NOT learnt?", options: ["Polymer Clay", "Crochet", "Knitting", "Resin"], correct: 2 },
+            { q: "Which European language did I attempt to learn but failed?", options: ["German", "Russian", "Italian", "French"], correct: 3 },
+            { q: "What side hustle did I do to earn money?", options: ["Graphic Design", "Web Design", "Copywriting", "Data Entry"], correct: [0, 1, 2, 3] },
+            { q: "What is my favourite paint to use?", options: ["Watercolour", "Gouache Paint", "Acryllic Paint", "Oil Paints"], correct: 3 },
+            { q: "I liked making ceramics with the pottery wheel but why did I stop?", options: ["Skill Issue", "Messy", "Long Nails", "Expensive"], correct: 2 },
+            { q: "When did I get my first graphic design job?", options: ["10", "12", "14", "16"], correct: 1 },
+            { q: "What instruments did I try to learn?", options: ["Violin", "Guitar", "Cello", "Piano"], correct: [0, 1, 3] },
+            { q: "What kind of therapist was I?", options: ["Behavioural Therapist", "Psychodynamic Therapist", "Systems Therapist", "Occupational Therapist"], correct: 0 },
+            { q: "What have I NOT crochet before?", options: ["Virgin Killer Sweater", "Patchwork Sweater", "Socks", "Ribbon Scarf"], correct: 2 }
         ]
     },
     'quiz-6': {
         icon: 'img/10.png',
-        title: '2 truths, 1 lie',
+        title: 'no no list',
         subtitle: 'I have made too many oopsie daisies. Let\'s see which ones you know of.',
         questions: [
             { q: "Where was our first date?", options: ["Cinema", "Coffee Shop", "Park", "Restaurant"], correct: 1 }
