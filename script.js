@@ -18,8 +18,7 @@ const quizzes = {
             { q: "What did I study before Psychology?", options: ["Journalism", "Creative Writing", "Mass Communications", "Graphic Design"], correct: 2 },
             { q: "My chinese name is 黄智敏 (Huang Zhi Min). What does it mean?", options: ["Precious Person", "Agile Mind", "Gods Gift" ,"Excllent Fortune"], correct: 1 },
             { q: "What would 100% motivate me while Im in worm mode?", options: ["Death", "Deadlines", "Nothing can motivate me", "Boredom"], correct: 3 },
-            { q: "When I imagine myself, what hair colour do I imagine myself in?", options: ["Plum", "Pink", "Blonde", "Whatever I have on"], correct: 2 },
-            { q: "Which phobia do I NOT have?", options: ["Cacophobia", "Molluscophobia", "Thalassophobia", "Trypophobia"], correct: 2 }
+            { q: "When I imagine myself, what hair colour do I imagine myself in?", options: ["Plum", "Pink", "Blonde", "Whatever I have on"], correct: 2 }
         ]
     },
     'quiz-2': {
@@ -89,9 +88,13 @@ const quizzes = {
     'quiz-6': {
         icon: 'img/10.png',
         title: 'no no list',
-        subtitle: 'I have made too many oopsie daisies. Let\'s see which ones you know of.',
+        subtitle: 'I hate many things. Do you know what I hate?',
         questions: [
-            { q: "Where was our first date?", options: ["Cinema", "Coffee Shop", "Park", "Restaurant"], correct: 1 }
+            { q: "What animal am I most afraid of?", options: ["Turtle", "Snail", "Tortoise", "Crocodile"], correct: [1, 2] },
+            { q: "What type of meat do I absolutely refuse to eat?", options: ["Chicken", "Pork", "Lamb", "Beef"], correct: 3 },
+            { q: "Which pet will I never get?", options: ["Fighter fish", "Snake", "Hamster", "Rat"], correct: 2 },
+            { q: "Which phobia do I NOT have?", options: ["Cacophobia", "Molluscophobia", "Thalassophobia", "Trypophobia"], correct: 2 },
+            { q: "What is the biggest ick to me?", options: ["Hating on my research", "Making fun of pink", "Telling me to cross my legs", "Asking me to do things without reason"], correct: 0 }
         ]
     }
 };
