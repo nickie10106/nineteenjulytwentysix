@@ -8,10 +8,16 @@ const quizzes = {
         subtitle: 'how well do you know me?',
         questions: [
             { q: "What would kill me if I ate it?", options: ["Mozerella Pizza", "Chicken Masala", "Bing Su", "Congee"], correct: 2 },
-            { q: "What was NOT a career I considered as a child?", options: ["Rich Person", "Deep Sea Explorer", "Archeologist", "Author", "Surgeon", "Botanist", "Astrologist"], correct: 5 },
-            { q: "What are my nicknames for my babies (Natalie, Benjamin and Valerie)?", options: ["Nutella, Ben, Vally", "Nat, Ben, Val", "My Sunshine, Monster1, Monster2", "Baby NatNat, Benjy, ValVal"], correct: 3 },
-            { q: "If I had 10 million dollars, what is the first venture would I fund?", options: ["Turning old malls into housing for the homeless", "Bribe schools to make education less academic focused and more on exploration", "Fund independent art studios and provide 3D printing filament made of recycled bottles", "Fund wildlife sanctuaries for marine research so that marine life do not need to stay in aquariums"], correct: 1 },
-            { q: "I admire pandas. What is the number 1 reason I look up to them?", options: ["They have false thumbs that allow them to grip things and so they don't have to move to grab things. They just stretch.", "They are bad at everything but they get by solely by pretty previlege and they are treated like precious treasures just for being cute", "They sit on their babies a lot on accident. Their carelessness reminds me of my childhood.", "They can roll around all day and they have no survival instincts so their body would prioritise being lazy over finding food"], correct: 2 }
+            { q: "What was NOT a career I considered as a child?", options: ["Runway Model", "Deep Sea Explorer", "Archeologist", "Author", "Fashion Designer"], correct: 1 },
+            { q: "What are my nicknames for my babies (Natalie, Benjamin and Valerie)?", options: ["Nutella, Ben, Vally", "Nat, Ben, Val", "Sunshine, Monster1, Monster2", "NatNat, Benjy, ValVal"], correct: 4 },
+            { q: "If I had 10 million dollars, what is the first thing I would buy?", options: ["Old Malls", "Stocks", "Clothes", "Property"], correct: 1 },
+            { q: "I admire pandas. What is the number 1 reason I look up to them?", options: ["False thumbs", "Pretty previlege", "Sit on babies", "Laziness"], correct: 2 },
+            { q: "Which part of Singapore do I live in?", options: ["Sengkang", "Botanic Gardens", "Punggol", "Yio Chu Kang"], correct: 3 },
+            { q: "What was my original hair colour?", options: ["Chocolate brown", "Pitch black", "Tan brown", "Raven"], correct: 1 },
+            { q: "What did I study before Psychology?", options: ["Journalism", "Creative Writing", "Mass Communications", "Graphic Design"], correct: 3 },
+            { q: "What would 100% motivate me while Im in worm mode?", options: ["Death", "Deadlines", "Nothing can motivate me", "Boredom"], correct: 4 },
+            { q: "When I imagine myself, what hair colour do I imagine myself in?", options: ["Plum", "Pink", "Blonde", "Whatever I have on"], correct: 3 },
+            { q: "Which phobia do I NOT have?", options: ["Cacophobia", "Molluscophobia", "Thalassophobia", "Trypophobia"], correct: 3 }
         ]
     },
     'quiz-2': {
@@ -19,7 +25,16 @@ const quizzes = {
         title: 'my favs',
         subtitle: 'This should be the easiest one since I like so many things. Just know I will judge you if you get it wrong.',
         questions: [
-            { q: "Where was our first date?", options: ["Cinema", "Coffee Shop", "Park", "Restaurant"], correct: 1 }
+            { q: "What is my favourite shade of pink?", options: ["Fuschsia", "Carnation Pink", "Dusty Pink", "Blush Pink"], correct: 3 },
+            { q: "What is my favourite ship of all time?", options: ["HaruMichi", "JonDami", "Wolfstar", "SuperCorp"], correct: 3 },
+            { q: "Who is my favourite fictional vampire?", options: ["Carmilla From Carmilla", "Lestat from Interview w The Vampire", "Alucard from Hellsing", "Mika from Owari no Seraph"], correct: [2, 3] },
+            { q: "What is my favourite type of Lolita subculture?", options: ["Kawaii", "Gothic", "Guro/Gore", "Hime/Princess"], correct: 4 },
+            { q: "What is my second favourite animal?", options: ["Bottlenose dolphins", "Bengal Tigers", "Capybara", "Small Clawed River Otters"], correct: 1 },
+            { q: "What is my favourite classic?", options: ["Wuthering Heights", "Through the Looking Glass", "The Picture of Dorian Gray", "The Little Mermaid"], correct: [3, 4] },
+            { q: "What is my favourite hair colour I have done?", options: ["Cotton Candy", "Lilac", "Split Hair", "Changes Everyday"], correct: 1 },
+            { q: "What is my favourite place in Singapore?", options: ["The Zoo", "Sentosa Beach", "My Bed", "The Singapore Art Gallery"], correct: 2 },
+            { q: "What is my favourite food?", options: ["Aglio Olio", "Tonkatsu Ramen", "Chinese Prawn Noodle", "Nasi Lemak"], correct: 4 },
+            { q: "What is my favourite romance trope?", options: ["Love Triangle", "Fantasy Enemies to Lovers", "Slowburn Friends to Lovers", "Fated Pairs"], correct: 3 }
         ]
     },
     'quiz-3': {
@@ -27,7 +42,16 @@ const quizzes = {
         title: 'アニメ',
         subtitle: 'I had to learn about your anime ranking list against my will so now you have no choice but to pay attention to mine.',
         questions: [
-            { q: "Where was our first date?", options: ["Cinema", "Coffee Shop", "Park", "Restaurant"], correct: 1 }
+            { q: "What is the anime that got me into anime?", options: ["Inuyasha", "YuYuHakusho", "Sailor Moon", "Blood C"], correct: 1 },
+            { q: "My favourite mangaka of all time is ___________.", options: ["Mochizuki Jun (Pandora Hearts)", "Takahashi Rumiko (Inuyasha)", "Takeuchi Naoko (Sailor Moon)", "Tanemura Arina (Kaitou Jeanne)"], correct: 4 },
+            { q: "I say that this anime ruinned my life cause it got me into yaoi.", options: ["Kuroko no Basuke", "Yuri on Ice!!", "Free!Iwatobi Swim Club", "Haikyu!!"], correct: 3 },
+            { q: "What is the one genre of anime I avoid (not for bad reasons, I just don\'t like it)?", options: ["Mecha", "Harem", "Ecchi", "Shounen"], correct: 1 },
+            { q: "Which character did I pray to everyday before GCSEs?", options: ["Sailor Moon", "Clow Reed (Cardcaptor Sakura)", "Rei (Ensemble Stars)", "Dazai (Bungou Stray Dogs)"], correct: 3 },
+            { q: "What is my favourite genre of anime to watch when Im stressed?", options: ["Gag Anime", "Slice of Life", "Shoujo", "Horror"], correct: 1 },
+            { q: "Which character did I collect many figures of when I was a child?", options: ["Makoto (Free!Iwatobi)", "Hatsune Miku (Vocaloid)", "Asuka (Evangelion)", "Mirajane (Fairytail)"], correct: 2 },
+            { q: "Which fairytail character do I want to marry?", options: ["Mirajane", "Lucy", "Cana", "Lisanna"], correct: 2 },
+            { q: "Who was Ichigo from Bleach supposed to end up with?", options: ["Rukia", "Kuchiki Rukia", "Rukia NOT Orihime", "The first shinigami he met, Rukia"], correct: [1, 2, 3, 4] },
+            { q: "What genre of anime was I obsessed with growing up?", options: ["Idol", "Magical Girl", "Romance", "Action"], correct: [1, 2] }
         ]
     },
     'quiz-4': {
