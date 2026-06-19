@@ -10,6 +10,7 @@ const quizzes = {
             { q: "What would kill me if I ate it?", options: ["Mozerella Pizza", "Chicken Masala", "Bing Su", "Congee"], correct: 2 },
             { q: "What was NOT a career I considered as a child?", options: ["Runway Model", "Deep Sea Explorer", "Archeologist", "Author", "Fashion Designer"], correct: 1 },
             { q: "What are my nicknames for my babies (Natalie, Benjamin and Valerie)?", options: ["Nutella, Ben, Vally", "Nat, Ben, Val", "Sunshine, Monster1, Monster2", "NatNat, Benjy, ValVal"], correct: 4 },
+            { q: "What flowers do I like?", options: ["Pink Roses", "Carnations", "Sunflowers", "Sweet Pea"], correct: [1, 2, 3, 4] },
             { q: "If I had 10 million dollars, what is the first thing I would buy?", options: ["Old Malls", "Stocks", "Clothes", "Property"], correct: 1 },
             { q: "I admire pandas. What is the number 1 reason I look up to them?", options: ["False thumbs", "Pretty previlege", "Sit on babies", "Laziness"], correct: 2 },
             { q: "Which part of Singapore do I live in?", options: ["Sengkang", "Botanic Gardens", "Punggol", "Yio Chu Kang"], correct: 3 },
@@ -26,6 +27,7 @@ const quizzes = {
         subtitle: 'This should be the easiest one since I like so many things. Just know I will judge you if you get it wrong.',
         questions: [
             { q: "What is my favourite shade of pink?", options: ["Fuschsia", "Carnation Pink", "Dusty Pink", "Blush Pink"], correct: 3 },
+            { q: "What is my favourite type of chocolate?", options: ["Dark Chocolate", "Milk Chocolate", "White Chocolate"], correct: 3 },
             { q: "What is my favourite ship of all time?", options: ["HaruMichi", "JonDami", "Wolfstar", "SuperCorp"], correct: 3 },
             { q: "Who is my favourite fictional vampire?", options: ["Carmilla From Carmilla", "Lestat from Interview w The Vampire", "Alucard from Hellsing", "Mika from Owari no Seraph"], correct: [2, 3] },
             { q: "What is my favourite type of Lolita subculture?", options: ["Kawaii", "Gothic", "Guro/Gore", "Hime/Princess"], correct: 4 },
