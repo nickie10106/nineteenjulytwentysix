@@ -533,6 +533,27 @@ button {
     text-align: right;
 }
 
+/* --- Keep Letter Button Styling --- */
+#letter-screen .keep-letter-btn {
+    width: 75%;
+    margin-top: 20px;     /* Leaves a clean gap right under the lilac paper */
+    margin-bottom: 25px;  /* Gives it breathing room at the bottom edge of the screen */
+    padding: 12px 20px;
+    font-size: 15px;
+    background-color: #FAEDED;
+    border: 3px solid #A65D67;
+    border-radius: 25px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 0px #A65D67;
+    transition: transform 0.1s ease;
+}
+
+#letter-screen .keep-letter-btn:active {
+    transform: scale(0.95);
+}
+
 /* --- ANIMATIONS --- */
 @keyframes unfoldLetter {
     0% {
