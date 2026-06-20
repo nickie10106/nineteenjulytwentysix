@@ -340,7 +340,7 @@ button {
 .question-inner-box {
     background-color: white;
     border: 3px solid #A65D67;
-    padding: 12px 10px;          /* Cut vertical padding down from 20px to 12px to make it less tall */
+    padding: 8px 10px;          /* Cut vertical padding down from 20px to 12px to make it less tall */
     text-align: center;
     font-weight: bold;
     color: #000;

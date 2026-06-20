@@ -24,7 +24,7 @@ const quizzes = {
     'quiz-2': {
         icon: 'img/5.png',
         title: 'my favs',
-        subtitle: 'This should be the easiest one since I like so many things. Just know I will judge you if you get it wrong.',
+        subtitle: 'This should be the easiest one since I like so many things.',
         questions: [
             { q: "What is my favourite shade of pink?", options: ["Fuschsia", "Carnation Pink", "Dusty Pink", "Blush Pink"], correct: 2 },
             { q: "What is my favourite type of chocolate?", options: ["Dark Chocolate", "Milk Chocolate", "White Chocolate"], correct: 2 },
@@ -42,7 +42,7 @@ const quizzes = {
     'quiz-3': {
         icon: 'img/6.png',
         title: 'アニメ',
-        subtitle: 'I had to learn about your anime ranking list against my will so now you have no choice but to pay attention to mine.',
+        subtitle: 'I had to learn about your anime ranking list against my will.',
         questions: [
             { q: "What is the anime that got me into anime?", options: ["Inuyasha", "YuYuHakusho", "Sailor Moon", "Blood C"], correct: 0 },
             { q: "My favourite mangaka of all time is ___________.", options: ["Mochizuki Jun (Pandora Hearts)", "Takahashi Rumiko (Inuyasha)", "Takeuchi Naoko (Sailor Moon)", "Tanemura Arina (Kaitou Jeanne)"], correct: 3 },
@@ -72,7 +72,7 @@ const quizzes = {
     'quiz-5': {
         icon: 'img/9.png',
         title: 'side quests',
-        subtitle: 'I procrastinate by doing random side quests and coming back with 100 balls of yarn. How many of my hobbies do you know about?',
+        subtitle: 'I procrastinate by doing random side quests.',
         questions: [
             { q: "What is a craft that I have NOT learnt?", options: ["Polymer Clay", "Crochet", "Knitting", "Resin"], correct: 2 },
             { q: "Which European language did I attempt to learn but failed?", options: ["German", "Russian", "Italian", "French"], correct: 3 },
@@ -91,10 +91,12 @@ const quizzes = {
         subtitle: 'I hate many things. Do you know what I hate?',
         questions: [
             { q: "What animal am I most afraid of?", options: ["Turtle", "Snail", "Tortoise", "Crocodile"], correct: [1, 2] },
-            { q: "What type of meat do I absolutely refuse to eat?", options: ["Chicken", "Pork", "Lamb", "Beef"], correct: 3 },
+            { q: "What type of meat do I absolutely refuse to eat?", options: ["Chicken", "Pork", "Lamb", "Beef"], correct: 2 },
             { q: "Which pet will I never get?", options: ["Fighter fish", "Snake", "Hamster", "Rat"], correct: 2 },
-            { q: "Which phobia do I NOT have?", options: ["Cacophobia", "Molluscophobia", "Thalassophobia", "Trypophobia"], correct: 2 },
-            { q: "What is the biggest ick to me?", options: ["Hating on my research", "Making fun of pink", "Telling me to cross my legs", "Asking me to do things without reason"], correct: 0 }
+            { q: "Which phobia do I NOT have?", options: ["Cacophobia", "Claustrophobia", "Thalassophobia", "Trypophobia"], correct: 2 },
+            { q: "What is the biggest ick to me?", options: ["Hating on my research", "Making fun of pink", "Telling me to cross my legs", "Doing things arbitrarily"], correct: 0 },
+            { q: "Which one of these excercises can I do?", options: ["10 Sit Ups", "4 Chin Ups", "10 Push Ups", "None"], correct: 2 }, 
+            { q: "How many times did I get covid?", options: ["3", "4", "5", "6"], correct: 0 }
         ]
     }
 };
