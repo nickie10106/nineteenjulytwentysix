@@ -271,7 +271,7 @@ function showResults() {
 // 1. THE IMPORTANT DATES (JS months start at 0!)
 // ==========================================
 const birthdayDate = new Date(2020, 6, 19, 0, 0, 0).getTime(); // July 19, 2026
-const officialDate = new Date(2026, 3, 25, 0, 0, 0).getTime(); // April 25, 2026
+const officialDate = new Date(2026, 3, 25, 15, 30, 0).getTime(); // April 25, 2026
 
 // ==========================================
 // 2. SCREEN NAVIGATION LOGIC
