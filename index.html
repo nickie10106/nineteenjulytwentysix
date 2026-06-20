@@ -51,7 +51,7 @@
             </div>
 
             <div class="menu-row row-2">
-                <img src="img/3.png" alt="Read Card" class="icon-btn" onclick="showScreen('message-screen')">
+                <img src="img/3.png" alt="Read Card" class="icon-btn" onclick="showScreen('letter-gateway-screen')">
                 <img src="img/us-static.JPG" alt="Us" class="static-img"> 
             </div>
 
@@ -176,11 +176,49 @@
         </div>
     </div>
 
-    <div id="message-screen" class="screen">
-        <h1>To my amazing boyfriend,</h1>
-        <p>Write your lovely, heartfelt birthday message right here! You can add paragraphs, emojis, or anything you like.</p>
-        <p>Love, Me </p>
-        <button class="back-btn" onclick="showScreen('menu-screen')">Back to Menu</button>
+    <div id="letter-gateway-screen" class="screen">
+        <div class="window-frame">
+
+            <div class="gateway-stack">
+                <img src="img/11.png" alt="Birthday Illustration" class="letter-gateway-deco">
+                <button class="pill-btn open-me-btn" onclick="showScreen('letter-screen')">OPEN ME</button>
+            </div>
+
+            <div class="bottom-nav" onclick="showScreen('menu-screen')">
+                <img src="img/star.png" class="nav-star" alt="star">
+                <span>back to menu</span>
+                <img src="img/star.png" class="nav-star" alt="star">
+            </div>
+        </div>
+    </div>
+
+    <div id="letter-screen" class="screen">
+        <div class="window-frame scrollable-frame">
+            <div class="window-dots">
+                <div class="dot yellow"></div><div class="dot green"></div><div class="dot pink"></div>
+            </div>
+
+            <div class="letter-paper">
+                <span class="letter-stamp">💝</span>
+                <h1 class="letter-header">Happy Birthday!</h1>
+                
+                <div class="letter-body">
+                    <p>Dearest [Name],</p>
+                    
+                    <p>Write your beautiful, heartwarming birthday letter text right here! You can make it as long as you want because this container is set to scroll beautifully if it runs past the screen frame.</p>
+                    
+                    <p>Thank you for playing all my quizzes, dealing with my random side quests, and being the best part of my universe. I hope this little custom app brings a massive smile to your face today!</p>
+                    
+                    <p class="letter-signature">With all my love,<br>xo Nickie</p>
+                </div>
+            </div>
+
+            <div class="bottom-nav" onclick="showScreen('menu-screen')">
+                <img src="img/star.png" class="nav-star" alt="star">
+                <span>back to menu</span>
+                <img src="img/star.png" class="nav-star" alt="star">
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
