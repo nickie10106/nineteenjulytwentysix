@@ -250,7 +250,7 @@ function showResults() {
     } else if (percentage >= 61) {
         // 61% to 75%
         imgElement.src = 'img/re6175.png';
-        msgElement.innerText = "Hmmm... Some might you DO know me.";
+        msgElement.innerText = "Hmmm... Some might say you DO know me.";
     } else if (percentage >= 41) {
         // 41% to 60%
         imgElement.src = 'img/re4160.png';
@@ -272,7 +272,7 @@ function showResults() {
 // ==========================================
 // 1. THE IMPORTANT DATES (JS months start at 0!)
 // ==========================================
-const birthdayDate = new Date(2020, 6, 19, 0, 0, 0).getTime(); // July 19, 2026
+const birthdayDate = new Date(2026, 7, 19, 0, 0, 0).getTime(); // July 19, 2026
 const officialDate = new Date(2026, 3, 25, 15, 30, 0).getTime(); // April 25, 2026
 
 // ==========================================
